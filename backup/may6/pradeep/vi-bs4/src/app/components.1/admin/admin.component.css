@@ -1,0 +1,22 @@
+a {
+    text-decoration: none !important;
+}
+
+.heading{
+    height: 125px !important;
+    width: 100%;
+}
+.card {
+    height: 250px;
+    width: 100%;
+}
+
+
+.vertical-text {
+    transform: rotate(-90deg);
+    transform-origin: left top 0;
+    padding-top: 100px;
+  
+
+}
+

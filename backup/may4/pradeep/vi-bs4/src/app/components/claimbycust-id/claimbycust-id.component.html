@@ -1,0 +1,58 @@
+<div class="container">
+  <hr>
+  <!-- <form [formGroup]="addForm" (ngSubmit)="onSubmit()"> 
+  <h2> Claim Details</h2>
+  <input type="custId" formControlName="custId" id="custId" placeholder="custId">
+  <div *ngIf="submitted && addForm.controls.custId.errors">
+    <div class="text-danger" *ngIf="addForm.controls.custId.errors.required">
+      custid required
+    </div>
+  </div>
+  <button class="btn btn-success">Claims</button>&nbsp;&nbsp;
+  <hr>
+</form> -->
+<!-- <form [formGroup]="addForm" (ngSubmit)="onSubmit()"> 
+    <h2> Claim Details</h2>
+    <input type="custId"  id="custId" placeholder="custId">
+    
+    <button class="btn btn-success">Claims</button>&nbsp;&nbsp;
+    <hr>
+  </form> -->
+
+
+
+  <table border='1'>
+    <thead>
+      <tr>
+        <th>Sr.No</th>
+        <th>claimId</th>
+        <!-- <th>custId</th> -->
+        <th>policyNumber</th>
+        <th>claimAmount</th>
+        <th>damageType</th>
+        <th>dateOfClaim</th>
+        <th>dateSettled</th>
+        <th>amountPaid</th>
+        <th>claimStatus</th>
+      </tr>
+    </thead>
+    <tbody [ngStyle]="{'color':'red','background-color':'cyan'}">
+      <tr *ngFor="let claim of claims;index as i">
+        <td>{{i+1}}</td>
+        <td>{{claim.claimId}}</td>
+        <!-- <td >{{claim.custId}}</td> -->
+        <td>{{claim.policyNumber}}</td>
+        <td>{{claim.claimAmount}}</td>
+        <td>{{claim.damageType}}</td>
+        <td>{{claim.dateOfClaim}}</td>
+        <td>{{claim.dateSettled}}</td>
+        <td>{{claim.amountPaid}}</td>
+        <td>{{claim.claimStatus}}</td>
+  
+
+
+      </tr>
+
+    </tbody>
+  </table>
+</div>

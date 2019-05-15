@@ -1,0 +1,72 @@
+
+
+<div class="container pt-5 mt-5">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+
+
+    </div>
+    <div class="col-md-6 mx-auto">
+      <div class="text-right">
+        <button class="btn btn-outline-secondary btn-lg" style="margin-left:30px"
+          (click)="back();">Back</button>
+      </div>
+    </div>
+    <div class="col-md-12 mx-auto">
+      <h1>Policy Details</h1>
+      <hr><br><br><br>
+    </div>
+
+
+  </div>
+
+<table class="table table-hover" >
+<thead>
+    <tr>
+        <th>Sr.No</th>
+        <th>policyNumber</th>
+        <th>IssueDate</th>
+        <th>ExpiryDate</th>
+        <th>SumAssured</th>
+        <th>vechicleRegId</th>
+        <th>policyStatus</th>
+        <th>totalPremium</th>
+        <th>renualDate</th>
+        <!-- <th>ncb</th>
+        <th>discount</th>
+        <th>applicationId</th>
+        <th>custId</th>
+        <th>nomineeId</th>
+        <th>vehicleId</th> -->
+     
+    </tr>
+</thead>
+<tbody>
+   <tr *ngFor="let policy of policyList;index as i">
+     <td>{{i+1}}</td>
+      <td >{{policy.policyNumber}}</td>
+      <td >{{policy.policyIssueDate}}</td>
+      <td >{{policy.policyExpiryDate}}</td>
+      <td >{{policy.policySumAssured}}</td>
+      <td >{{policy.vechicleRegId}}</td>
+      <td >{{policy.policyStatus}}</td>
+      <td >{{policy.totalPremium}}</td>
+      <td >{{policy.renualDate}}</td>
+      <!-- <td >{{policy.ncb}}</td>
+      <td >{{policy.discount}}</td>
+      <td >{{policy.applicationId}}</td>
+      <td >{{policy.vehicle.custId}}</td>
+      <td >{{policy.nominee.nomineeId}}</td>
+      <td >{{policy.vehicle.vehicleId}}</td> -->
+
+      
+  
+    
+      <!-- <td><button class="btn btn-warning" style="margin-left: 0px;"
+        (click)="editPolicy(policy);"
+        >Edit</button></td> -->
+   </tr> 
+   
+</tbody>
+</table>
+</div>

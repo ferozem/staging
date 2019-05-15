@@ -1,0 +1,170 @@
+<!-- Claim -->
+<section id="claim">
+  <div class="container pt-5 mt-5">
+    <!--padding top - 5 ----margin top-5  -->
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="card">
+          <div class="card-header">
+            <h4>Claim Request</h4>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="addClaim" (ngSubmit)="onSubmit()">
+
+              <div class="form-group">
+                <label for="custId ">CustomerId</label>
+                <input type="text" class="form-control" formControlName="custId" id="custId" name="custId"
+                  placeholder="custId">
+                <div *ngIf="submitted && addClaim.controls.custId.errors" class="error">
+                  <div class="text-danger" *ngIf=" addClaim.controls.custId.errors.required">
+                    CustomerId is Required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="policyNumber">PolicyNumber</label>
+                <input type="text" class="form-control" formControlName="policyNumber" id="policyNumber" name="policyNumber"
+                  placeholder="policyNumber">
+                <div *ngIf="submitted && addClaim.controls.policyNumber.errors" class="error">
+                  <div class="text-danger" *ngIf=" addClaim.controls.policyNumber.errors.required">
+                    PolicyNumber is Required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="claimAmount ">claimAmount</label>
+                <input type="text" class="form-control" formControlName="claimAmount" id="claimAmount" name="claimAmount"
+                  placeholder="claimAmount">
+                <div *ngIf="submitted && addClaim.controls.claimAmount.errors" class="error">
+                  <div class="text-danger" *ngIf=" addClaim.controls.claimAmount.errors.required">
+                    claimAmount is Required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="damageType ">damageType</label>
+                <input type="text" class="form-control" formControlName="damageType" id="damageType" name="damageType"
+                  placeholder="damageType">
+                <div *ngIf="submitted && addClaim.controls.damageType.errors" class="error">
+                  <div class="text-danger" *ngIf=" addClaim.controls.damageType.errors.required">
+                   DamageType is Required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="dateOfClaim ">dateOfClaim</label>
+                <input type="text" class="form-control" formControlName="dateOfClaim" id="dateOfClaim" name="dateOfClaim"
+                  placeholder="dateOfClaim">
+                <div *ngIf="submitted && addClaim.controls.dateOfClaim.errors" class="error">
+                  <div class="text-danger" *ngIf=" addClaim.controls.dateOfClaim.errors.required">
+                    dateOfClaim is Required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="dateSettled ">dateSettled</label>
+                <input type="text" class="form-control" formControlName="dateSettled" id="dateSettled" name="dateSettled"
+                  placeholder="dateSettled">
+                <div *ngIf="submitted && addClaim.controls.dateSettled.errors" class="error">
+                  <div class="text-danger" *ngIf=" addClaim.controls.dateSettled.errors.required">
+                    dateSettled is Required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="amountPaid ">amountPaid</label>
+                <input type="text" class="form-control" formControlName="amountPaid" id="amountPaid" name="amountPaid"
+                  placeholder="amountPaid">
+                <div *ngIf="submitted && addClaim.controls.amountPaid.errors" class="error">
+                  <div class="text-danger" *ngIf=" addClaim.controls.amountPaid.errors.required">
+                    amountPaidis Required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="claimStatus ">claimStatus</label>
+                <input type="text" class="form-control" formControlName="claimStatus" id="claimStatus" name="claimStatus"
+                  placeholder="claimStatus">
+                <div *ngIf="submitted && addClaim.controls.claimStatus.errors" class="error">
+                  <div class="text-danger" *ngIf=" addClaim.controls.claimStatus.errors.required">
+                    claimStatus is Required
+                  </div>
+                </div>
+              </div>
+              <br>
+               
+               <input type="submit" value="Submit" class="btn btn-primary">&nbsp;&nbsp;&nbsp;
+               <input type="reset" value="Cancel" class="btn  btn-danger">
+               
+               <div class="form-group text-center pt-2">
+                
+                  
+               </div>
+             </form>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+
+</section>
+
+<!-- <div class="form-group">
+                 
+                 <label for="email">CustomerId</label>
+                 
+                 <input type="text" class="form-control">
+               </div>
+               <div class="form-group">
+                 <label for="password">PolicyNumber</label>
+                 <input type="text" class="form-control">
+               </div>
+               <div class="form-group">
+                <label for="password">ClaimAmount</label>
+                <input type="text" class="form-control">
+              </div>
+              
+              <div class="form-group">
+                <label for="password">DamageType</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="password">DateOfClaim</label>
+                <input type="text" class="form-control">
+              </div>
+              
+              <div class="form-group">
+                <label for="password">DateSettled</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="password">AmountPaid</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="password">ClaimStatus</label>
+                <input type="text" class="form-control">
+              </div>
+               
+                 <br>
+               
+               <input type="submit" value="Submit" class="btn btn-primary">&nbsp;&nbsp;&nbsp;
+               <input type="reset" value="Cancel" class="btn  btn-danger">
+               
+               <div class="form-group text-center pt-2">
+                
+                  
+               </div>
+             </form>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>-->

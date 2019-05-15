@@ -1,0 +1,255 @@
+<div class="container pt-5 mt-5">
+  <!--padding top - 5 ----margin top-5  -->
+
+
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+
+
+    </div>
+    <div class="col-md-6 mx-auto">
+      <div class="text-right">
+        <button class="btn btn-outline-secondary btn-lg" style="margin-left:30px"
+          (click)="editCustomer(customer);">Edit</button>
+      </div>
+    </div>
+    <div class="col-md-12 mx-auto">
+      <h1>Personal Info</h1>
+      <hr><br><br><br>
+    </div>
+
+
+  </div>
+
+  <div class="row">
+    <div class="col">
+
+      <div class="col-md-12 mx-auto">
+        <h6>First Name</h6>
+        <h2>{{ customer.custFname }}</h2>
+        <hr>
+      </div>
+
+      <div class="col-md-12 mx-auto">
+        <h6>Last Name</h6>
+        <h2>{{ customer.custLname }}</h2>
+        <hr>
+      </div>
+
+      <div class="col-md-12 mx-auto">
+        <h6>Customer Id</h6>
+        <h2>{{ customer.custId }}</h2>
+        <hr>
+      </div>
+
+      <div class="col-md-12 mx-auto">
+        <h6>User Id</h6>
+        <h2>{{ customer.userId }}</h2>
+        <hr>
+      </div>
+
+      <div class="col-md-12 mx-auto">
+        <h6>Date Of Birth</h6>
+        <h2>{{ customer.custDob }}</h2>
+        <hr>
+      </div>
+
+      <div class="col-md-12 mx-auto">
+        <h6>Gender</h6>
+        <h2>{{ customer.custGender }}</h2>
+        <hr>
+      </div>
+
+      <div class="col-md-12 mx-auto">
+        <h6>Address Line 1</h6>
+        <h2>{{ customer.custAddressLine1 }}</h2>
+        <hr>
+      </div>
+
+      <div class="col-md-12 mx-auto">
+        <h6>Address Line 2</h6>
+        <h2>{{ customer.custAddressLine2 }}</h2>
+        <hr>
+      </div>
+
+      <div class="col-md-12 mx-auto">
+        <h6>City</h6>
+        <h2>{{ customer.custCity }}</h2>
+        <hr>
+      </div>
+
+      <div class="col-md-12 mx-auto">
+        <h6>State</h6>
+        <h2>{{ customer.custState }}</h2>
+        <hr>
+      </div>
+
+
+    </div>
+    <div class="col">
+
+      
+      <div class="col-md-12 mx-auto">
+        <h6>Zip Code</h6>
+        <h2>{{ customer.custZipCode }}</h2>
+        <hr>
+      </div>
+
+      <div class="col-md-12 mx-auto">
+        <h6>Country</h6>
+        <h2>{{ customer.custCountry }}</h2>
+        <hr>
+      </div>
+
+
+      <div class="col-md-12 mx-auto">
+        <h6>Mobile</h6>
+        <h2>{{ customer.mobile }}</h2>
+        <hr>
+      </div>
+
+      <div class="col-md-12 mx-auto">
+        <h6>Email</h6>
+        <h2>{{ customer.custEmail }}</h2>
+        <hr>
+      </div>
+
+      <div class="col-md-12 mx-auto">
+        <h6>Blood Group</h6>
+        <h2>{{ customer.customerbloodGroup }}</h2>
+        <hr>
+      </div>
+
+      <div class="col-md-12 mx-auto">
+        <h6>Id Type</h6>
+        <h2>{{ customer.identityType }}</h2>
+        <hr>
+      </div>
+
+      <div class="col-md-12 mx-auto">
+        <h6>Id Number</h6>
+        <h2>{{ customer.idNumber }}</h2>
+        <hr>
+      </div>
+
+      <div class="col-md-12 mx-auto">
+        <h6>Marital Status</h6>
+        <h2>{{ customer.maritalStatus }}</h2>
+        <hr>
+      </div>
+
+    </div>
+  </div>
+  <!-- 
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <h6>First Name</h6>
+        <h2>{{ customer.custFname }}</h2>
+        <hr>
+      </div>
+      <div class="col-md-6 mx-auto">
+        <h6>Last Name</h6>
+        <h2>{{ customer.custLname }}</h2>
+        <hr>
+      </div>
+      <div class="col-md-6 mx-auto">
+        <h6>First Name</h6>
+        <h2>{{ customer.custFname }}</h2>
+        <hr>
+      </div>
+      <div class="col-md-6 mx-auto">
+        <h6>First Name</h6>
+        <h2>{{ customer.custFname }}</h2>
+        <hr>
+      </div>
+      <div class="col-md-6 mx-auto">
+        <h6>First Name</h6>
+        <h2>{{ customer.custFname }}</h2>
+        <hr>
+      </div>
+      <div class="col-md-6 mx-auto">
+        <h6>First Name</h6>
+        <h2>{{ customer.custFname }}</h2>
+        <hr>
+      </div>
+
+      <div class="col-md-6 mx-auto">
+        <h6>Email</h6>
+        <hr>
+      </div>
+    </div>
+  </div> -->
+
+
+
+
+
+  <!--     
+  <table  align="center">
+        <tr>
+          <td>Last Name Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum nemo labore consectetur deleniti, iusto voluptatibus tenetur corporis, illum sequi assumenda quisquam itaque pariatur temporibus incidunt? Voluptatem officia a numquam odit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem assumenda accusantium repellendus ea blanditiis, voluptas, ratione eveniet cumque eaque impedit iusto tenetur repudiandae et id suscipit minus quaerat voluptatibus nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus iste, labore commodi nemo pariatur officiis tempora? Pariatur illo sunt libero natus neque temporibus voluptatibus sequi beatae quis quae, repudiandae corporis?</td> 
+          <td>First Name adflkadflk adljdfkladfadfkladfkadjffasdf Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eum rem maxime quibusdam unde modi ratione minus atque facilis possimus quisquam molestias nemo perspiciatis aperiam inventore quae? Doloribus, dolorem aspernatur.</td>
+        </tr>
+          <tr>
+          <td>Mohammad</td>
+          <td>Feroze</td>
+          </tr>
+          <tr>
+          <td>idunt? Voluptatem officia a numquam odit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem assumenda accusantium repellendus ea blanditiis, voluptas, ratione eveniet cumque eaque impedit iusto tenetur repudiandae et id suscipit minus quaerat voluptatibus nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus iste, labore commodi nemo pariatur officiis tempora? Pariatur illo sunt libero natus neque temporibus voluptatibus sequi beatae quis quae, repudiandae corporis?</td> 
+          <td>First Name</td>
+        </tr>
+          <tr>
+          <td>Mohammad</td>
+          <td>Feroze</td>
+          </tr>
+  </table> -->
+
+
+  <!-- <td>{{i+1}}</td>
+              <td>{{ emp.empId }}</td>
+              <td>{{ emp.firstName }}</td>
+              <td>{{ emp.lastName }}</td>
+              <td>{{ emp.email }}</td>
+              <td>{{ emp.age }}</td>
+              <td>{{ emp.salary }}</td> -->
+
+
+
+
+  <!-- <div style="text-align:center">
+  <button class="btn btn-primary" (click) ="addEmp()"> Add Employee </button>
+  
+      <br><br>
+      
+  <table border="1" align="center">
+      <thead>
+          <tr>
+              <th>SrNo</th>
+              <th>Emp Id</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Age</th>
+              <th>Salary</th>
+              <th>Action</th>
+          </tr>
+      </thead>
+      <tbody [ngStyle]="{'color':'red', 'background-color':'cyan'}">
+          <tr *ngFor="let emp of employees; index as i">
+              <td>{{i+1}}</td>
+              <td>{{ emp.empId }}</td>
+              <td>{{ emp.firstName }}</td>
+              <td>{{ emp.lastName }}</td>
+              <td>{{ emp.email }}</td>
+              <td>{{ emp.age }}</td>
+              <td>{{ emp.salary }}</td>
+              <td>
+                  <button class="btn btn-danger" (click)="deleteEmp(emp)">Delete</button>
+                  <button class="btn btn-warning" style="margin-left:30px" (click)="editEmp(emp)">Edit</button>
+              </td>
+          </tr>
+        
+          
+      </tbody>
+  </table>
+  </div> -->

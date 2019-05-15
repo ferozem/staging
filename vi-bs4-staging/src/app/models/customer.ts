@@ -1,0 +1,21 @@
+export class Customer {
+    custId:string;
+    custFname:string;
+    custLname:string;
+    custDob:string;
+    custGender:string;
+    custAddressLine1:string;
+    custAddressLine2:string;
+    custCity:string;
+    custState:string;
+    custZipCode:string;
+    custCountry:string;
+    mobile:string;
+    custEmail:string;
+    customerbloodGroup:string;
+    identityType:string;
+    idNumber:string;
+    userId:string;
+    password:string;
+    maritalStatus:string;
+}

@@ -1,0 +1,101 @@
+<div class="container pt-5 mt-5">
+    <!--padding top - 5 ----margin top-5  -->
+  
+  
+    <div class="form-row">
+      <div class="col-md-6">
+  
+  
+      </div>
+      <div class="col-md-6">
+        <div class="text-right">
+          <!-- <button class="btn btn-outline-secondary btn-lg" style="margin-left:30px"
+            (click)="editTicket(ticket);">Done</button> -->
+        </div>
+      </div>
+      <div class="col-md-12 mx-auto">
+        <h1>Edit Claim</h1>
+        <hr><br><br><br>
+      </div>
+    </div>
+  </div>
+  
+  <div class="form-row">
+    <div class="col">
+    
+      <div class="container">
+        <!-- Extended material form grid -->
+        <form [formGroup]="editClaim" (ngSubmit)="onSubmit()">
+          <!-- Grid row -->
+          <div class="form-row">
+            <!-- Grid column -->
+            <div class="col-md-6">
+              <!-- Material input -->
+              <!-- <div class="md-form form-group">
+                <input mdbInput type="text" class="form-control" id="custId" formControlName="custId"
+                  placeholder="">
+                <label for="custId">
+                  <h6>CustomerId</h6>
+                </label>
+              </div> -->
+              <div class=" md-form form-group">
+                <input mdbInput type="text" class="form-control" id="policyNumber" formControlName="policyNumber"
+                  placeholder="">
+                <label for="policyNumber">
+                  <h6>PolicyNumber</h6>
+                </label>
+              </div>
+              <div class=" md-form form-group">
+                  <input mdbInput type="text" class="form-control" id="claimAmount" formControlName="claimAmount"
+                    placeholder="">
+                  <label for="claimAmount">
+                    <h6>ClaimAmount</h6>
+                  </label>
+                </div>
+                <div class=" md-form form-group">
+                    <input mdbInput type="text" class="form-control" id="damageType" formControlName="damageType"
+                      placeholder="">
+                    <label for="damageType">
+                      <h6>DamageType</h6>
+                    </label>
+                  </div>
+                  <div class=" md-form form-group">
+                      <input mdbInput type="text" class="form-control" id="dateOfClaim" formControlName="dateOfClaim"
+                        placeholder="">
+                      <label for="dateOfClaim">
+                        <h6>DateOfClaim</h6>
+                      </label>
+                    </div>
+                    <div class=" md-form form-group">
+                        <input mdbInput type="text" class="form-control" id="dateSettled" formControlName="dateSettled"
+                          placeholder="">
+                        <label for="dateSettled">
+                          <h6>dateSettled</h6>
+                        </label>
+                      </div>
+                      <div class=" md-form form-group">
+                          <input mdbInput type="text" class="form-control" id="amountPaid" formControlName="amountPaid"
+                            placeholder="">
+                          <label for="amountPaid">
+                            <h6>AmountPaid</h6>
+                          </label>
+                        </div>
+                        <div class=" md-form form-group">
+                            <input mdbInput type="text" class="form-control" id="claimStatus" formControlName="claimStatus"
+                              placeholder="">
+                            <label for="claimStatus">
+                              <h6>ClaimStatus</h6>
+                            </label>
+                          </div>
+              <button class="btn btn-success">Update</button>&nbsp;&nbsp;
+            <a routerLink="/listclaim" class="btn btn-warning">Cancel</a>
+            </div>
+  
+            
+          </div>
+        </form>
+        
+       
+      </div>
+    </div>
+  </div>

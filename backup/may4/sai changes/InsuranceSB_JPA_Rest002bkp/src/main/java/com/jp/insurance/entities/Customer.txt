@@ -1,0 +1,118 @@
+package com.jpm.pizza.springboot.entities;
+
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+@Entity
+@Table(name="Pizza_Customer")
+public class Customer {
+	
+
+	@Id
+	@Column(name="Cust_Id")
+	@SequenceGenerator(name="customer_seq",sequenceName="customer_seq",allocationSize=1)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="customer_seq")
+	private Integer customerId;
+	@Column(name="Cust_First_Name")
+	private String firstName;
+	@Column(name="Cust_Last_Name")
+	private String lastName;
+	@Column(name="Cust_Mobile")
+	private String mobile;
+	@Column(name="Cust_Email")
+	private String email;
+	
+	//Association with Address
+	@OneToMany(
+	        mappedBy = "customer",
+	        cascade = CascadeType.ALL,
+	        orphanRemoval = true
+	    )	
+	 @JsonManagedReference
+	private List<CustomerAddress> addressList;	
+	
+	public Customer() {
+		super();
+	}
+
+	
+	public Customer(Integer customerId, String firstName, String lastName, String street, String country,
+			Integer zipCode, String mobile, String email) {
+		super();
+		this.customerId = customerId;
+		this.firstName = firstName;
+		this.lastName = lastName;		
+		this.mobile = mobile;
+		this.email = email;
+	}
+
+
+	public Integer getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(Integer customerId) {
+		this.customerId = customerId;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public String getMobile() {
+		return mobile;
+	}
+
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	public List<CustomerAddress> getAddressList() {
+		return addressList;
+	}
+
+	public void setAddressList(List<CustomerAddress> addressList) {
+		this.addressList = addressList;	}
+
+
+	@Override
+	public String toString() {
+		return "Customer [customerId=" + customerId + ", firstName=" + firstName + ", lastName=" + lastName
+				+ ", mobile=" + mobile + ", email=" + email + ", addressList=" + addressList + "]";
+	}
+
+	
+	
+
+}

@@ -1,0 +1,279 @@
+<div class="container pt-5 mt-5">
+    <!--padding top - 5 ----margin top-5  -->
+    <div class="form-row">
+      <div class="col-md-6">
+        <br><br>
+        <br>
+      </div>
+      <div class="col-md-6">
+        <div class="text-right">
+          <!-- <button class="btn btn-outline-secondary btn-lg" style="margin-left:30px"
+            (click)="editCustomer(customer);">Done</button> -->
+        </div>
+      </div>
+      <div class="col-md-12 mx-auto">
+        <h1>Sign Up</h1>
+        <hr><br><br><br>
+      </div>
+    </div>
+  </div>
+  
+  <div class="form-row">
+    <div class="col">
+  
+      <div class="container">
+        <form [formGroup]="addCust" (ngSubmit)="onSubmit()">
+          <div class="form-row">
+  
+            <!-- column-1 starts -->
+            <div class="col-md-6">
+  
+              <div class="md-form form-group input-group-lg">
+                <input mdbInput type="text" class="form-control" formControlName="custFname" id="custFname"
+                  placeholder="">
+                  <label for="custFname"><h6>First Name</h6></label>
+                <div *ngIf="submitted && addCust.controls.custFname.errors" class="error">
+                  <div class="text-danger" *ngIf=" addCust.controls.custFname.errors.required">
+                    First Name is Required
+                  </div>
+                </div>
+  
+              </div>
+  
+              <div class="md-form form-group input-group-lg">
+                <input mdbInput type="text" class="form-control" formControlName="custLname" id="custLname"
+                  placeholder="">
+                  <label for="custLname"><h6>Last Name</h6></label>
+                <div *ngIf="submitted && addCust.controls.custLname.errors" class="error">
+                  <div class="text-danger" *ngIf=" addCust.controls.custLname.errors.required">
+                    Last Name is Required
+                  </div>
+                </div>
+  
+              </div>
+  
+              <div class="md-form form-group input-group-lg">
+                
+                <input mdbInput type="text" class="form-control" formControlName="userId" id="userId" name="userId"
+                  placeholder="">
+                  <label for="userId"> <h6>User Id</h6></label>
+                <div *ngIf="submitted && addCust.controls.userId.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.userId.errors.required">
+                    UserId is Required
+                  </div>
+                  <div class="text-danger" *ngIf="addCust.controls.userId.errors.pattern">Enter Valid userId(8 t0 15 charecters)</div>
+                </div>
+              </div>
+  
+              <div class="md-form form-group input-group-lg">
+                <input mdbInput type="password" class="form-control" formControlName="password" id="password"
+                  placeholder="">
+                  <label for="password"> <h6>Password</h6></label>
+                <div *ngIf="submitted && addCust.controls.password.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.password.errors.required">
+                    Password is Required
+                  </div>
+                  <div class="text-danger" *ngIf="addCust.controls.password.errors.pattern">Not valid(6 t0 12 charecters)</div>
+                </div>
+              </div>
+  
+              <!-- form-group input-group-lg -->
+              <div class="md-form form-group mx-5 my-5 input-group-lg ">
+                <input type="date" class="form-control" formControlName="custDob" id="custDob"
+                  placeholder="">
+                  <label for="custDob"> <h6>Date Of Birth</h6></label>
+                <div *ngIf="submitted && addCust.controls.custDob.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.custDob.errors.required">
+                    Dob is Required
+                  </div>
+                </div>
+              </div>
+  
+              <h6>Gender</h6>
+              <div class=" md-form form-group input-group-lg ">
+                  <select class="browser-default custom-select custom-select-lg mb-3" id="custGender" formControlName="custGender"
+                    name="custGender">
+                      <!-- <option selected></option> -->
+                    <option *ngFor="let s of sex" [value]="s.name">{{s.name}}
+                  </select>
+                  
+                  <div *ngIf="submitted && addCust.controls.custGender.errors" class="error">
+                    <div class="text-danger" *ngIf="addCust.controls.custGender.errors.required">
+                      Gender is Required
+                    </div>
+                  </div>
+              </div>
+  
+              <!-- <div class="md-form form-group input-group-lg">
+                <input mdbInput type="text" class="form-control" formControlName="custGender" id="custGender"
+                  placeholder="">
+                  <label for="custGender"> <h6>Gender</h6></label>
+                <div *ngIf="submitted && addCust.controls.custGender.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.custGender.errors.required">
+                    Gender is Required
+                  </div>
+                </div>
+              </div> -->
+  
+              <div class="md-form form-group input-group-lg">
+                <input mdbInput type="text" class="form-control" formControlName="custAddressLine1"
+                  id="custAddressLine1" placeholder="">
+                  <label for="custAddressLine1"> <h6>Address Line 1</h6></label>
+                <div *ngIf="submitted && addCust.controls.custAddressLine1.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.custAddressLine1.errors.required">
+                    * is Required
+                  </div>
+                </div>
+              </div>
+  
+              <div class="md-form form-group input-group-lg">
+                <input mdbInput type="text" class="form-control" formControlName="custAddressLine2"
+                  id="custAddressLine2" placeholder="">
+                  <label for="custAddressLine2"> <h6>Address Line 2</h6></label>
+                <div *ngIf="submitted && addCust.controls.custAddressLine2.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.custAddressLine2.errors.required">
+                    * is Required
+                  </div>
+                </div>
+              </div>
+  
+              <div class="md-form form-group input-group-lg">
+                <input mdbInput type="text" class="form-control" formControlName="custCity" id="custCity"
+                placeholder="">
+                  <label for="custCity"> <h6>City</h6></label>
+                <div *ngIf="submitted && addCust.controls.custCity.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.custCity.errors.required">
+                    * is Required
+                  </div>
+                </div>
+              </div>
+  
+              <div class="md-form form-group input-group-lg">
+                <input mdbInput type="text" class="form-control" formControlName="custState" id="custState"
+                  placeholder="">
+                  <label for="custState"> <h6>State</h6></label>
+                <div *ngIf="submitted && addCust.controls.custState.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.custState.errors.required">
+                    * is Required
+                  </div>
+                </div>
+              </div>
+  
+  
+            </div>
+            <!-- column-1 Ends-->
+  
+            <!-- column-2 Starts-->
+            <div class="col-md-6">
+              <div class="md-form form-group input-group-lg">
+                  <label for="custZipCode"> <h6>Zip Code</h6></label>
+                <input mdbInput type="text" class="form-control" formControlName="custZipCode" id="custZipCode"
+                  name="custZipCode" placeholder="">
+                <div *ngIf="submitted && addCust.controls.custZipCode.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.custZipCode.errors.required">
+                    * is Required
+                  </div>
+                </div>
+              </div>
+  
+              <div class="md-form form-group input-group-lg">
+                  <label for="custCountry"> <h6>Country</h6></label>
+                <input mdbInput type="text" class="form-control" formControlName="custCountry" id="custCountry"
+                  name="custCountry" placeholder="">
+                <div *ngIf="submitted && addCust.controls.custCountry.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.custCountry.errors.required">
+                    * is Required
+                  </div>
+                </div>
+              </div>
+  
+              <div class="md-form form-group input-group-lg">
+                  <label for="mobile"> <h6>Mobile Number</h6></label>
+                <input mdbInput type="text" class="form-control" formControlName="mobile" id="mobile" name="mobile"
+                  placeholder="">
+                <div *ngIf="submitted && addCust.controls.mobile.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.mobile.errors.required">
+                    Mobile Number is Required
+                  </div>
+                  <div class="text-danger" *ngIf="addCust.controls.mobile.errors.pattern">Enter valid Mobile Number</div>
+                </div>
+              </div>
+  
+              <div class="md-form form-group input-group-lg">
+                  <label for="custEmail"> <h6>Email</h6></label>
+                <input mdbInput type="text" class="form-control" formControlName="custEmail" id="custEmail"
+                  name="custEmail" placeholder="">
+                <div *ngIf="submitted && addCust.controls.custEmail.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.custEmail.errors.required">
+                    Email is Required
+                  </div>
+                  <div class="text-danger" *ngIf="addCust.controls.custEmail.errors.pattern">Enter correct Email pattern</div>
+                </div>
+              </div>
+  
+              <div class="md-form form-group input-group-lg">
+                  <label for="customerbloodGroup"> <h6>Blood Group</h6></label>
+                <input mdbInput type="text" class="form-control" formControlName="customerbloodGroup"
+                  id="customerbloodGroup" name="customerbloodGroup" placeholder="">
+                <div *ngIf="submitted && addCust.controls.customerbloodGroup.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.customerbloodGroup.errors.required">
+                    Blood Group is Required
+                  </div>
+                </div>
+              </div>
+  
+              <div class="md-form form-group input-group-lg">
+  
+                  <label for="identityType"> <h6>ID Type</h6></label>
+                <input mdbInput type="text" class="form-control" formControlName="identityType" id="identityType"
+                  name="identityType" placeholder="">
+                <div *ngIf="submitted && addCust.controls.identityType.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.identityType.errors.required">
+                    Id Type is Required
+                  </div>
+                </div>
+  
+  
+  
+              </div>
+  
+              <div class="md-form form-group input-group-lg">
+                  <label for="idNumber"> <h6>ID Number</h6></label>
+                <input mdbInput type="text" class="form-control" formControlName="idNumber" id="idNumber"
+                  name="idNumber" placeholder="">
+                <div *ngIf="submitted && addCust.controls.idNumber.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.idNumber.errors.required">
+                    Id Number is Required
+                  </div>
+                </div>
+              </div>
+  
+              <h6>Marital Status</h6>
+              <div class=" md-form form-group input-group-lg ">
+                  <select class="browser-default custom-select custom-select-lg mb-3" id="maritalStatus" formControlName="maritalStatus">
+                      <!-- <option selected></option> -->
+                    <option *ngFor="let s of status" [value]="s.name">{{s.name}}
+                  </select>
+                <div *ngIf="submitted && addCust.controls.maritalStatus.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.maritalStatus.errors.required">
+                    Status is Required
+                  </div>
+                </div>
+              </div>
+  
+  
+            </div>
+            <!-- column-2 Ends-->
+  
+          </div>
+  
+          <button class="btn purple-gradient btn-lg">Submit</button>&nbsp;&nbsp;
+          <a routerLink="/home" class="btn btn-outline-purple btn-lg">Cancel</a>
+          <div class="form-group text-center pt-2">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <br><br><br>

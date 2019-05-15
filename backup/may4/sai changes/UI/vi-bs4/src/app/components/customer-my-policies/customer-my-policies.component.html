@@ -1,0 +1,26 @@
+<div class="col-md-12 mx-auto">
+  <table table table-bordered>
+      <thead>
+          <tr>
+              <th>Policy Number</th>
+              <th>Expiry Date</th>
+              <th>Vehicle Reg</th>
+              <th>Premium</th>
+              
+          </tr>
+      </thead>
+      <tbody [ngStyle]="{'color':'red', 'background-color':'cyan'}">
+          <tr *ngFor="let pl of policyList; index as i">
+              <a (click)="getConsolidatedPolicy(pl.policyNumber)"><td>{{ pl.policyNumber }}</td></a>
+              <td>{{ pl.policyExpiryDate }}</td>
+              <td>{{ pl.vechicleRegId }}</td>
+              <td>{{ pl.totalPremium }}</td>
+          </tr>
+          <tr>
+              {{username}}
+          </tr>
+        
+          
+      </tbody>
+  </table>
+  </div>

@@ -1,0 +1,54 @@
+
+
+Angular App in AWS Cloud Elastic Beanstalk: chandraspringbootdev.ap-south-1.elasticbeanstalk.com
+
+SPRING BOOT APP in AWS CLOUD Elastic Beanstalk: http://chandraspringbootdev.ap-south-1.elasticbeanstalk.com
+
+S3 URL for Angular App:  http://chandraanuglar7dev.s3-website.ap-south-1.amazonaws.com
+
+S3 Backup URL for Angular App: http://chandraanuglar7dev.s3-website.ap-south-1.amazonaws.com
+
+AWS Orcale RDS Instance: 
+End Point: insurance.c9sw0helcuxe.ap-south-1.rds.amazonaws.com
+
+Port: 1521
+
+DB: ORCL
+
+User: insurance
+Password:******
+
+
+Home Controller: chandraspringbootdev.ap-south-1.elasticbeanstalk.com
+
+DB Connectivity Test: chandraspringbootdev.ap-south-1.elasticbeanstalk.com/db
+
+Customer List: chandraspringbootdev.ap-south-1.elasticbeanstalk.com/api/customers
+
+Claim By Claim Id: chandraspringbootdev.ap-south-1.elasticbeanstalk.com/api/claims/1
+
+Add Claim: chandraspringbootdev.ap-south-1.elasticbeanstalk.com/api/claims/save  -- post maping
+
+Update Claim: chandraspringbootdev.ap-south-1.elasticbeanstalk.com/api/claims/save/1 with Claim data as Body  - put mapping
+
+Delete Claim: chandraspringbootdev.ap-south-1.elasticbeanstalk.com/api/claims/save/1 with Claim data as Body -- delete mapping
+
+
+Claim List: chandraspringbootdev.ap-south-1.elasticbeanstalk.com/api/claims
+
+Claim By Claim Id: chandraspringbootdev.ap-south-1.elasticbeanstalk.com/api/claims/1
+
+Add Claim: chandraspringbootdev.ap-south-1.elasticbeanstalk.com/api/claims/save  -- post maping
+
+Update Claim: chandraspringbootdev.ap-south-1.elasticbeanstalk.com/api/claims/save/1 with Claim data as Body  - put mapping
+
+Delete Claim: chandraspringbootdev.ap-south-1.elasticbeanstalk.com/api/claims/save/1 with Claim data as Body -- delete mapping
+
+
+SPRING BOOT APP in AWS CLOUD Elastic Beanstalk: http://chandraspringbootdev.ap-south-1.elasticbeanstalk.com
+
+Angular App in AWS Cloud Elastic Beanstalk: chandraspringbootdev.ap-south-1.elasticbeanstalk.com
+
+S3 URL for Angular App:  http://chandraanuglar7dev.s3-website.ap-south-1.amazonaws.com
+
+S3 Backup URL for Angular App: http://chandraanuglar7dev.s3-website.ap-south-1.amazonaws.com

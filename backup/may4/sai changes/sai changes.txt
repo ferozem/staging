@@ -1,0 +1,21 @@
+add dummy policy recrod to insurance-dml.sql
+
+INSERT into POLICY VALUES(POLICY_seq.nextval,to_date('03-05-2019','DD-MM-YYYY'),
+to_date('03-05-2020','DD-MM-YYYY'),
+2018,209000,'AP29BC1413','ACTIVE',18200,to_date('04-05-2020','DD-MM-YYYY'),1400,840,
+901,
+100,
+2,
+201);
+
+add @JsonFormat(pattern="dd-mm-yyyy") annotation to both expriryDate and renualDate in entity
+
+add LoginController to controlellers
+
+add @CrossOrigin(origins="*",allowedHeaders="*") to policyController
+
+add loginDao, LoginDaoImpl to dao
+
+add LoginService,LoginServcieImpl to service
+
+add login details to entities

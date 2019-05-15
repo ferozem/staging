@@ -1,0 +1,31 @@
+<div class="container">
+
+<hr>
+<h2> Ticket Details</h2>
+
+
+<hr>
+<table border='1'>
+  <thead>
+    <tr>
+      <th>Sr.No</th>
+      <th>TicketNumber</th>
+      <th>TicketDescription</th>
+      <th>TicketStatus</th>
+      <!-- <th>EmpId</th> -->
+    </tr>
+  </thead>
+  <tbody [ngStyle]="{'color':'red','background-color':'cyan'}">
+    <tr *ngFor="let ticket of tickets;index as i">
+      <td>{{i+1}}</td>
+      <td>{{ticket.ticketNumber}}</td>
+      <td>{{ticket.ticketDescription}}</td>
+      <td>{{ticket.ticketStatus}}</td>
+      <!-- <td>{{ticket.empId}}</td> -->
+      <td><button class="btn btn-warning" style="margin-left: 0px;" (click)="editTicket(ticket);">Edit</button></td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+

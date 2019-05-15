@@ -1,0 +1,227 @@
+
+<!-- LOGIN -->
+<section id="login">
+  <div class="container pt-5 mt-5">
+    <!--padding top - 5 ----margin top-5  -->
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="card">
+          <div class="card-header">
+            <h4>Sign Up</h4>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="addCust" (ngSubmit)="onSubmit()">
+
+              <div class="form-group">
+                <label for="custFname">First Name</label>
+                <input type="text" class="form-control" formControlName="custFname" id="custFname" name="custFname"
+                  placeholder="First Name">
+                <div *ngIf="submitted && addCust.controls.custFname.errors" class="error">
+                  <div class="text-danger" *ngIf=" addCust.controls.custFname.errors.required">
+                    First Name is Required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="custLname">Last Name</label>
+                <input type="text" class="form-control" formControlName="custLname" id="custLname" name="custLname"
+                  placeholder="Last name">
+                <div *ngIf="submitted && addCust.controls.custLname.errors" class="error">
+                  <div class="text-danger" *ngIf=" addCust.controls.custLname.errors.required">
+                    Last Name is Required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="custDob">Date of Birth</label>
+                <input type="custDob" class="form-control" formControlName="custDob" id="custDob" name="custDob"
+                  placeholder="Dob">
+                <div *ngIf="submitted && addCust.controls.custDob.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.custDob.errors.required">
+                    Dob is Required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="custGender">Gender</label>
+                <input type="custGender" class="form-control" formControlName="custGender" id="custGender"
+                  name="custGender" placeholder="Gender">
+                <div *ngIf="submitted && addCust.controls.custGender.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.custGender.errors.required">
+                    Gender is Required
+                  </div>
+                </div>
+              </div>
+              <!-- Address -->
+              <div class="form-group">
+                <label for="custAddressLine1">Address Line 1</label>
+                <input type="custAddressLine1" class="form-control" formControlName="custAddressLine1"
+                  id="custAddressLine1" name="custAddressLine1" placeholder="custAddressLine1">
+                <div *ngIf="submitted && addCust.controls.custAddressLine1.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.custAddressLine1.errors.required">
+                    * is Required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="custAddressLine2">Address Line 2</label>
+                <input type="custAddressLine2" class="form-control" formControlName="custAddressLine2"
+                  id="custAddressLine2" name="custAddressLine2" placeholder="Address">
+                <div *ngIf="submitted && addCust.controls.custAddressLine2.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.custAddressLine2.errors.required">
+                    * is Required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="custCity">City</label>
+                <input type="custCity" class="form-control" formControlName="custCity" id="custCity" name="custCity"
+                  placeholder="City">
+                <div *ngIf="submitted && addCust.controls.custCity.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.custCity.errors.required">
+                    * is Required
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="form-group">
+                <label for="custState">State</label>
+                <input type="custState" class="form-control" formControlName="custState" id="custState" name="custState"
+                  placeholder="City">
+                <div *ngIf="submitted && addCust.controls.custState.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.custState.errors.required">
+                    * is Required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="custZipCode">Zip Code</label>
+                <input type="custZipCode" class="form-control" formControlName="custZipCode" id="custZipCode"
+                  name="custZipCode" placeholder="Zip Code">
+                <div *ngIf="submitted && addCust.controls.custZipCode.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.custZipCode.errors.required">
+                    * is Required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="custCountry">Country</label>
+                <input type="custCountry" class="form-control" formControlName="custCountry" id="custCountry"
+                  name="custCountry" placeholder="Address">
+                <div *ngIf="submitted && addCust.controls.custCountry.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.custCountry.errors.required">
+                    * is Required
+                  </div>
+                </div>
+              </div>
+
+              <!-- End of Addres section-->
+
+              <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input type="mobile" class="form-control" formControlName="mobile" id="mobile" name="mobile"
+                  placeholder="Mobile">
+                <div *ngIf="submitted && addCust.controls.mobile.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.mobile.errors.required">
+                    Mobile Number is Required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="custEmail">Email</label>
+                <input type="custEmail" class="form-control" formControlName="custEmail" id="custEmail" name="custEmail"
+                  placeholder="custEmail">
+                <div *ngIf="submitted && addCust.controls.custEmail.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.custEmail.errors.required">
+                    Email is Required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="customerbloodGroup">Blood Group</label>
+                <input type="customerbloodGroup" class="form-control" formControlName="customerbloodGroup"
+                  id="customerbloodGroup" name="customerbloodGroup" placeholder="customerbloodGroup">
+                <div *ngIf="submitted && addCust.controls.customerbloodGroup.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.customerbloodGroup.errors.required">
+                    Blood Group is Required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="identityType">ID Type</label>
+                <input type="identityType" class="form-control" formControlName="identityType" id="identityType"
+                  name="identityType" placeholder="identityType">
+                <div *ngIf="submitted && addCust.controls.identityType.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.identityType.errors.required">
+                    Id Type is Required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="idNumber">ID Number</label>
+                <input type="idNumber" class="form-control" formControlName="idNumber" id="idNumber" name="idNumber"
+                  placeholder="idNumber">
+                <div *ngIf="submitted && addCust.controls.idNumber.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.idNumber.errors.required">
+                    Id Number is Required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="userId">User Id</label>
+                <input type="userId" class="form-control" formControlName="userId" id="userId" name="userId"
+                  placeholder="userId">
+                <div *ngIf="submitted && addCust.controls.userId.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.userId.errors.required">
+                    UserId is Required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" formControlName="password" id="password" name="password"
+                  placeholder="userId">
+                <div *ngIf="submitted && addCust.controls.password.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.password.errors.required">
+                    Password is Required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="maritalStatus">Marital Status</label>
+                <input type="maritalStatus" class="form-control" formControlName="maritalStatus" id="maritalStatus"
+                  name="maritalStatus" placeholder="maritalStatus">
+                <div *ngIf="submitted && addCust.controls.maritalStatus.errors" class="error">
+                  <div class="text-danger" *ngIf="addCust.controls.maritalStatus.errors.required">
+                    Status is Required
+                  </div>
+                </div>
+              </div>
+
+              <input type="submit" value="Submit" class="btn btn-primary btn-block">
+              <div class="form-group text-center pt-2">
+
+                <a href="#">Forgot Password</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

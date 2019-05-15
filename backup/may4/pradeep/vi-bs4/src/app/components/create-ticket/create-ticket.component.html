@@ -1,0 +1,66 @@
+<!-- Claim -->
+<section id="claim">
+    <div class="container pt-5 mt-5">
+      <!--padding top - 5 ----margin top-5  -->
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card">
+            <div class="card-header">
+              <h4>Ticket Creation</h4>
+            </div>
+            <div class="card-body">
+              <form [formGroup]="createTicket" (ngSubmit)="onSubmit()">
+  
+                <div class="form-group">
+                  <label for="ticketDescription ">TicketDescription</label>
+                  <input type="text" class="form-control" formControlName="ticketDescription" id="ticketDescription" name="ticketDescription"
+                    placeholder="ticketDescription">
+                  <div *ngIf="submitted && createTicket.controls.ticketDescription.errors" class="error">
+                    <div class="text-danger" *ngIf=" createTicket.controls.ticketDescription.errors.required">
+                      TicketDescription is Required
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="form-group">
+                  <label for="policyNumber">TicketStatus</label>
+                  <input type="text" class="form-control" formControlName="ticketStatus" id="ticketStatus" name="ticketStatus"
+                    placeholder="ticketStatus">
+                  <div *ngIf="submitted && createTicket.controls.ticketStatus.errors" class="error">
+                    <div class="text-danger" *ngIf=" createTicket.controls.ticketStatus.errors.required">
+                      TicketStatus is Required
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- <div class="form-group">
+                  <label for="claimAmount ">EmployeeId</label>
+                  <input type="text" class="form-control" formControlName="empId" id="empId" name="empId"
+                    placeholder="empId">
+                  <div *ngIf="submitted && createTicket.controls.claimAmount.errors" class="error">
+                    <div class="text-danger" *ngIf=" createTicket.controls.claimAmount.errors.required">
+                      EmployeeId is Required
+                    </div>
+                  </div>
+                </div> -->
+  
+                
+                <br>
+                 
+                 <input type="submit" value="Submit" class="btn btn-primary">&nbsp;&nbsp;&nbsp;
+                 <input type="reset" value="Cancel" class="btn  btn-danger">
+                 
+                 <div class="form-group text-center pt-2">
+                  
+                    
+                 </div>
+               </form>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+  
+  </section>
+  
+  

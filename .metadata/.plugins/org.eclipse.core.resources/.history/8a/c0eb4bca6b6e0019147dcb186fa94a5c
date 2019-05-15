@@ -1,0 +1,30 @@
+
+package com.jp.insurance.dao;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class LoginDaoImpl implements LoginDao {
+	
+	@PersistenceContext
+	private EntityManager entityManager;
+
+	@Override
+	public boolean userLogin(String username, String password) {
+		Query query = entityManager.createQuery("select u from Customer u where u.custEmail=:username");
+		query.setParameter("username",username);
+		if(!query.getResultList().isEmpty()){
+			if(password.equals("password")){
+				return true;
+			}
+		}
+		return false;
+	}
+
+	
+	
+}

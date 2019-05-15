@@ -1,0 +1,47 @@
+
+
+
+<div class="container">
+    <hr>
+    <h2> Claim Details</h2>
+    
+    
+    <hr>
+
+<table border='1' >
+  <thead>
+      <tr>
+          <th>Sr.No</th>
+          <th>claimId</th>
+          <th>custId</th>
+          <th>policyNumber</th>
+      <th>claimAmount</th>
+      <th>damageType</th>
+      <th>dateOfClaim</th>
+		  <th>dateSettled</th>
+		  <th>amountPaid</th>
+		  <th>claimStatus</th>
+      </tr>
+  </thead>
+  <tbody [ngStyle]="{'color':'red','background-color':'cyan'}">
+     <tr *ngFor="let claim of claims;index as i">
+       <td>{{i+1}}</td>
+        <td >{{claim.custId}}</td>
+        <td >{{claim.custId}}</td>
+        <td >{{claim.policyNumber}}</td>
+        <td >{{claim.claimAmount}}</td>
+        <td >{{claim.damageType}}</td>
+        <td >{{claim.dateOfClaim}}</td>
+		<td >{{claim.dateSettled}}</td>
+		<td >{{claim.amountPaid}}</td>
+		<td >{{claim.claimStatus}}</td>
+		
+      
+        <td><button class="btn btn-warning" style="margin-left: 0px;"
+          (click)="editClaim(claim);"
+          >Edit</button></td>
+     </tr> 
+     
+  </tbody>
+</table>
+</div>

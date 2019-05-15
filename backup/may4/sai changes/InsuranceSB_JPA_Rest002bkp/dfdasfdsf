@@ -1,0 +1,2 @@
+INSERT INTO POLICY VALUES(11, '25-apr-2019', '24-apr-2019', 1, 48000,'TN07BC8590','PENDING',5600, '24-apr-2019', 0,0,1,100,10,10);
+select * from policy;

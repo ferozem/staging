@@ -1,0 +1,28 @@
+<div class="container">
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="loginUserName" id="loginUserName" name="loginUserName" placeholder="User Name">
+    <div *ngIf="submitted && addForm.controls.loginUserName.errors" class="error">
+      <div class="text-danger" *ngIf="addForm.controls.loginUserName.errors.required">
+        First Name is required
+      </div>
+    </div>
+    <br>
+    <br>
+    <input type="password" formControlName="loginPassword" id="loginPassword" name="loginPassword" placeholder="Password">
+    <div *ngIf="submitted && addForm.controls.loginPassword.errors" class="error">
+      <div class="text-danger" *ngIf="addForm.controls.loginPassword.errors.required">
+        Last Name is required
+      </div>
+    </div>
+    <br>
+    <br>
+    <input type="radio" formControlName="loginType"  value="Customer" checked>Customer
+    <br>
+    <br>
+    <input type="radio" formControlName="loginType" value="Employee">Employee
+    <br>
+    <br>
+    <button class="btn btn-success">Login</button> &nbsp;&nbsp;&nbsp;
+    <button class="btn btn-danger">Register</button>
+    </form>
+  </div>

@@ -1,0 +1,172 @@
+<div class="container pt-5 mt-5">
+  <!--padding top - 5 ----margin top-5  -->
+
+
+  <div class="form-row">
+    <div class="col-md-6">
+      <br><br>
+      <br>
+    </div>
+    <div class="col-md-6">
+      <div class="text-right">
+        <!-- <button class="btn btn-outline-secondary btn-lg" style="margin-left:30px"
+          (click)="editCustomer(customer);">Done</button> -->
+      </div>
+    </div>
+    <div class="col-md-12 mx-auto">
+      <h1>Personal Info</h1>
+      <hr><br><br><br>
+    </div>
+  </div>
+</div>
+  
+  <div class="form-row">
+    <div class="col">
+
+  <div class="container">
+    <!-- Extended material form grid -->
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+      <!-- Grid row -->
+      <div class="form-row">
+        <!-- Grid column -->
+        <div class="col-md-6">
+          <!-- Material input -->
+          <div class="md-form form-group">
+            <input mdbInput type="text" class="form-control" id="custFname" formControlName="custFname" placeholder="">
+            <label for="custFname"><h6>First Name</h6></label>
+            <div *ngIf="submitted && editForm.controls.custFname.errors" class="error">
+                <div class="text-danger" *ngIf=" editForm.controls.custFname.errors.required">
+                  First Name is Required
+                </div>
+              </div>
+          </div>
+          <div class=" md-form form-group">
+              <input mdbInput type="text" class="form-control" id="custLname" formControlName="custLname" placeholder="">
+              <label for="custLname"><h6>Last Name</h6></label>
+              <div *ngIf="submitted && editForm.controls.custLname.errors" class="error">
+                  <div class="text-danger" *ngIf=" editForm.controls.custLname.errors.required">
+                    Last Name is Required
+                  </div>
+                </div>
+           </div>
+
+             <!-- Material input -->
+          <div class="md-form form-group">
+              <input mdbInput type="text" class="form-control" id="custId" formControlName="custId" placeholder="">
+              <label for="custId"><h6>Customer Id</h6></label>
+            </div>
+            <div class="md-form form-group">
+                <input mdbInput type="text" class="form-control" id="userId" formControlName="userId" placeholder="">
+                <label for="userId"> <h6>User Id</h6></label>
+                <div *ngIf="submitted && editForm.controls.userId.errors" class="error">
+                    <div class="text-danger" *ngIf="editForm.controls.userId.errors.required">
+                      UserId is Required
+                    </div>
+                  </div>
+              </div>
+
+               <!-- Material input -->
+          <div class="md-form form-group">
+              <input mdbInput type="text" class="form-control" id="custDob" formControlName="custDob" placeholder="">
+              <label for="custDob"> <h6>Date Of Birth</h6></label>
+              <div *ngIf="submitted && editForm.controls.custDob.errors" class="error">
+                  <div class="text-danger" *ngIf="editForm.controls.custDob.errors.required">
+                    Dob is Required
+                  </div>
+                </div>
+            </div>
+            <div class="md-form form-group">
+                <input mdbInput type="text" class="form-control" id="custGender" formControlName="custGender" placeholder="">
+                <label for="custGender"> <h6>Gender</h6></label>
+                <div *ngIf="submitted && editForm.controls.custGender.errors" class="error">
+                    <div class="text-danger" *ngIf="editForm.controls.custGender.errors.required">
+                      Gender is Required
+                    </div>
+                  </div>
+              </div>
+              <div class="md-form form-group">
+                  <input mdbInput type="text" class="form-control" id="custAddress" formControlName="custAddress" placeholder="">
+                  <label for="custAddress"> <h6>Address</h6></label>
+                  <div *ngIf="submitted && editForm.controls.custAddress.errors" class="error">
+                      <div class="text-danger" *ngIf="editForm.controls.custAddress.errors.required">
+                        Address is Required
+                      </div>
+                    </div>
+                </div>
+        </div>
+        <!-- Grid column -->
+
+        <div class="col-md-6">
+            <!-- Material input -->
+            <div class="md-form form-group">
+              <input mdbInput type="text" class="form-control" id="mobile" formControlName="mobile" placeholder="">
+              <label for="mobile"><h6>Mobile</h6></label>
+              <div *ngIf="submitted && editForm.controls.mobile.errors" class="error">
+                  <div class="text-danger" *ngIf="editForm.controls.mobile.errors.required">
+                    Mobile Number is Required
+                  </div>
+                </div>
+            </div>
+            <div class=" md-form form-group">
+                <input mdbInput type="text" class="form-control" id="custEmail" formControlName="custEmail" placeholder="">
+                <label for="custEmail"><h6>Email</h6></label>
+                <div *ngIf="submitted && editForm.controls.custEmail.errors" class="error">
+                    <div class="text-danger" *ngIf="editForm.controls.custEmail.errors.required">
+                      Email is Required
+                    </div>
+                  </div>
+             </div>
+  
+               <!-- Material input -->
+            <div class="md-form form-group">
+                <input mdbInput type="text" class="form-control" id="customerbloodGroup" formControlName="customerbloodGroup" placeholder="">
+                <label for="customerbloodGroup"> <h6>Blood Group</h6></label>
+                <div *ngIf="submitted && editForm.controls.customerbloodGroup.errors" class="error">
+                    <div class="text-danger" *ngIf="editForm.controls.customerbloodGroup.errors.required">
+                      Blood Group is Required
+                    </div>
+                  </div>
+              </div>
+              <div class="md-form form-group">
+                  <input mdbInput type="text" class="form-control" id="identityType" formControlName="identityType" placeholder="">
+                  <label for="identityType"> <h6>Id Type</h6></label>
+                  <div *ngIf="submitted && editForm.controls.identityType.errors" class="error">
+                      <div class="text-danger" *ngIf="editForm.controls.identityType.errors.required">
+                        Id Type is Required
+                      </div>
+                    </div>
+                </div>
+  
+                 <!-- Material input -->
+            <div class="md-form form-group">
+                <input mdbInput type="text" class="form-control" id="idNumber" formControlName="idNumber" placeholder="">
+                <label for="idNumber"> <h6>Id Number</h6></label>
+                <div *ngIf="submitted && editForm.controls.idNumber.errors" class="error">
+                    <div class="text-danger" *ngIf="editForm.controls.idNumber.errors.required">
+                      Id Number is Required
+                    </div>
+                  </div>
+              </div>
+              <div class="md-form form-group">
+                  <input mdbInput type="text" class="form-control" id="maritalStatus" formControlName="maritalStatus" placeholder="">
+                  <label for="maritalStatus"> <h6>Marital Status</h6></label>
+                  <div *ngIf="submitted && editForm.controls.maritalStatus.errors" class="error">
+                      <div class="text-danger" *ngIf="editForm.controls.maritalStatus.errors.required">
+                        Status is Required
+                      </div>
+                    </div>
+                </div>
+          </div>
+
+      </div>
+
+      <button class="btn btn-outline-secondary btn-lg">Updatee</button>&nbsp;&nbsp;
+      <a routerLink="/customer-profile" class="btn btn-outline-danger btn-lg">Cancel</a>
+    </form>
+    <!-- Extended material form grid -->
+  </div>
+
+  <br><br><br>
+
+
+ 

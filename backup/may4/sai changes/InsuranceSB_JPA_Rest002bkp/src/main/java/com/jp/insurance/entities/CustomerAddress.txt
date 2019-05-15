@@ -1,0 +1,140 @@
+package com.jpm.pizza.springboot.entities;
+
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@Entity
+@Table(name="CUST_ADDRESS")
+public class CustomerAddress {	
+	@Id
+	@Column(name="ADDR_ID")
+	private Integer addressId;
+	@Column(name="CUST_STREET")
+	private String street;
+	@Column(name="CUST_CITY")
+	private String city;
+	@Column(name="LANDMARK")
+	private String landMark;
+	@Column(name="CUST_STATE")
+	private String State;
+	@Column(name="CUST_COUNTRY")
+	private String country;
+	@Column(name="CUST_ZIP_CODE")
+	private Integer zipCode;
+	
+	//Association with Customer
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="CUST_ID")
+	//@JsonIgnore
+	@JsonBackReference
+    private Customer customer;	
+	
+	public CustomerAddress() {
+		super();
+	}
+
+	public CustomerAddress(String street, String landMark, String state, String country, Integer zipCode) {
+		super();
+		this.street = street;
+		this.landMark = landMark;
+		State = state;
+		this.country = country;
+		this.zipCode = zipCode;
+	}
+
+
+	public String getStreet() {
+		return street;
+	}
+
+
+	public void setStreet(String street) {
+		this.street = street;
+	}
+
+
+	public String getLandMark() {
+		return landMark;
+	}
+
+
+	public void setLandMark(String landMark) {
+		this.landMark = landMark;
+	}
+
+
+	public String getState() {
+		return State;
+	}
+
+
+	public void setState(String state) {
+		State = state;
+	}
+
+
+	public String getCountry() {
+		return country;
+	}
+
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+
+	public Integer getZipCode() {
+		return zipCode;
+	}
+
+
+	public void setZipCode(Integer zipCode) {
+		this.zipCode = zipCode;
+	}
+
+
+	public Integer getAddressId() {
+		return addressId;
+	}
+
+	public void setAddressId(Integer addressId) {
+		this.addressId = addressId;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+
+	@Override
+	public String toString() {
+		return "CustomerAddress [addressId=" + addressId + ", street=" + street + ", city=" + city + ", landMark="
+				+ landMark + ", State=" + State + ", country=" + country + ", zipCode=" + zipCode + "]";
+	}
+
+	
+
+
+}

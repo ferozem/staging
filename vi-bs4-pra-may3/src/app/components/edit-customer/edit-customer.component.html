@@ -1,0 +1,112 @@
+<div class="container pt-5 mt-5">
+    <!--padding top - 5 ----margin top-5  -->
+  
+  
+    <div class="form-row">
+      <div class="col-md-6">
+  
+  
+      </div>
+      <div class="col-md-6">
+        <div class="text-right">
+          <button class="btn btn-outline-secondary btn-lg" style="margin-left:30px"
+            (click)="editCustomer(customer);">Done</button>
+        </div>
+      </div>
+      <div class="col-md-12 mx-auto">
+        <h1>Personal Info</h1>
+        <hr><br><br><br>
+      </div>
+    </div>
+  </div>
+    
+    <div class="form-row">
+      <div class="col">
+  
+    <div class="container">
+      <!-- Extended material form grid -->
+      <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+        <!-- Grid row -->
+        <div class="form-row">
+          <!-- Grid column -->
+          <div class="col-md-6">
+            <!-- Material input -->
+            <div class="md-form form-group">
+              <input mdbInput type="text" class="form-control" id="custFname" formControlName="custFname" placeholder="">
+              <label for="custFname"><h6>First Name</h6></label>
+            </div>
+            <div class=" md-form form-group">
+                <input mdbInput type="text" class="form-control" id="custLname" formControlName="custLname" placeholder="">
+                <label for="custLname"><h6>Last Name</h6></label>
+             </div>
+  
+               <!-- Material input -->
+            <div class="md-form form-group">
+                <input mdbInput type="text" class="form-control" id="custId" formControlName="custId" placeholder="">
+                <label for="custId"><h6>Customer Id</h6></label>
+              </div>
+              <div class="md-form form-group">
+                  <input mdbInput type="text" class="form-control" id="userId" formControlName="userId" placeholder="">
+                  <label for="userId"> <h6>User Id</h6></label>
+                </div>
+  
+                 <!-- Material input -->
+            <div class="md-form form-group">
+                <input mdbInput type="text" class="form-control" id="custDob" formControlName="custDob" placeholder="">
+                <label for="custDob"> <h6>Date Of Birth</h6></label>
+              </div>
+              <div class="md-form form-group">
+                  <input mdbInput type="text" class="form-control" id="custGender" formControlName="custGender" placeholder="">
+                  <label for="custGender"> <h6>Gender</h6></label>
+                </div>
+                <div class="md-form form-group">
+                    <input mdbInput type="text" class="form-control" id="custAddress" formControlName="custAddress" placeholder="">
+                    <label for="custAddress"> <h6>Address</h6></label>
+                  </div>
+          </div>
+          <!-- Grid column -->
+  
+          <div class="col-md-6">
+              <!-- Material input -->
+              <div class="md-form form-group">
+                <input mdbInput type="text" class="form-control" id="mobile" formControlName="mobile" placeholder="">
+                <label for="mobile"><h6>Mobile</h6></label>
+              </div>
+              <div class=" md-form form-group">
+                  <input mdbInput type="text" class="form-control" id="custEmail" formControlName="custEmail" placeholder="">
+                  <label for="custEmail"><h6>Email</h6></label>
+               </div>
+    
+                 <!-- Material input -->
+              <div class="md-form form-group">
+                  <input mdbInput type="text" class="form-control" id="customerbloodGroup" formControlName="customerbloodGroup" placeholder="">
+                  <label for="customerbloodGroup"> <h6>Blood Group</h6></label>
+                </div>
+                <div class="md-form form-group">
+                    <input mdbInput type="text" class="form-control" id="identityType" formControlName="identityType" placeholder="">
+                    <label for="identityType"> <h6>Id Type</h6></label>
+                  </div>
+    
+                   <!-- Material input -->
+              <div class="md-form form-group">
+                  <input mdbInput type="text" class="form-control" id="idNumber" formControlName="idNumber" placeholder="">
+                  <label for="idNumber"> <h6>Id Number</h6></label>
+                </div>
+                <div class="md-form form-group">
+                    <input mdbInput type="text" class="form-control" id="maritalStatus" formControlName="maritalStatus" placeholder="">
+                    <label for="maritalStatus"> <h6>Marital Status</h6></label>
+                  </div>
+            </div>
+  
+        </div>
+  
+        <button class="btn btn-success">Updatee</button>&nbsp;&nbsp;
+        <a href="/list-emp" class="btn btn-warning">Cancel</a>
+      </form>
+      <!-- Extended material form grid -->
+    </div>
+  
+    <br><br><br>
+  
+  
+   

@@ -1,0 +1,57 @@
+
+
+<div class="container">
+  <hr>
+  <h2> Policy Details</h2>
+  <hr>
+
+<table border='1' >
+<thead>
+    <tr>
+        <th>Sr.No</th>
+        <th>policyNumber</th>
+        <th>IssueDate</th>
+        <th>ExpiryDate</th>
+        <th>SumAssured</th>
+        <th>vechicleRegId</th>
+        <th>policyStatus</th>
+        <th>totalPremium</th>
+        <th>renualDate</th>
+        <th>ncb</th>
+        <th>discount</th>
+        <th>applicationId</th>
+        <th>custId</th>
+        <th>nomineeId</th>
+        <th>vehicleId</th>
+     
+    </tr>
+</thead>
+<tbody [ngStyle]="{'color':'red','background-color':'cyan'}">
+   <tr *ngFor="let policy of policies;index as i">
+     <td>{{i+1}}</td>
+      <td >{{policy.policyNumber}}</td>
+      <td >{{policy.policyIssueDate}}</td>
+      <td >{{policy.policyExpiryDate}}</td>
+      <td >{{policy.policySumAssured}}</td>
+      <td >{{policy.vechicleRegId}}</td>
+      <td >{{policy.policyStatus}}</td>
+      <td >{{policy.totalPremium}}</td>
+      <td >{{policy.renualDate}}</td>
+      <td >{{policy.ncb}}</td>
+      <td >{{policy.discount}}</td>
+      <td >{{policy.applicationId}}</td>
+      <td >{{policy.vehicle.custId}}</td>
+      <td >{{policy.nominee.nomineeId}}</td>
+      <td >{{policy.vehicle.vehicleId}}</td>
+
+      
+  
+    
+      <td><button class="btn btn-warning" style="margin-left: 0px;"
+        (click)="editPolicy(policy);"
+        >Edit</button></td>
+   </tr> 
+   
+</tbody>
+</table>
+</div>

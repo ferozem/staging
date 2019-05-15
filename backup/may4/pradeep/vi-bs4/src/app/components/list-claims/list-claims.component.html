@@ -1,0 +1,89 @@
+
+
+
+<div class="container">
+    <hr>
+    <h2> Claim Details</h2>
+    
+    
+    <hr>
+
+<table border='1' >
+  <thead>
+      <tr>
+          <th>Sr.No</th>
+          <th>ClaimId</th>
+          <!-- <th>custId</th> -->
+          <th>PolicyNumber</th>
+      <th>ClaimAmount</th>
+      <th>DamageType</th>
+      <th>DateOfClaim</th>
+		  <th>DateSettled</th>
+		  <th>AmountPaid</th>
+      <th>ClaimStatus</th>
+      <th>Action</th>
+      </tr>
+  </thead>
+  <tbody [ngStyle]="{'color':'red','background-color':'cyan'}">
+     <tr *ngFor="let claim of claims;index as i">
+       <td>{{i+1}}</td>
+        <td >{{claim.claimId}}</td>
+        <!-- <td >{{claim.custId}}</td> -->
+        <td >{{claim.policyNumber}}</td>
+        <td >{{claim.claimAmount}}</td>
+        <td >{{claim.damageType}}</td>
+        <td >{{claim.dateOfClaim}}</td>
+		<td >{{claim.dateSettled}}</td>
+		<td >{{claim.amountPaid}}</td>
+    <td >{{claim.claimStatus}}</td>
+    <!-- <td ><button  class="btn btn-success" style="margin-left: 0px;"
+      (click)="approveClaim(claim);" 
+      >{{claim.claimStatus}}</button></td> -->
+		
+    <!-- [disabled]="{{buttonDisabled}}" -->
+        <td >
+
+            <!-- <div *ngIf="claim.claimStatus==='Approved'">
+                <button  class="btn btn-success" style="margin-left: 0px;"
+                (click)="approveClaim(claim);" disabled="claim.isDisabled">Approve</button>
+               <button  class="btn btn-warning" style="margin-left: 0px;"
+                  (click)="rejectClaim(claim);" disabled="claim.isDisabled">Reject</button>
+            </div> -->
+          <div *ngIf="claim.claimStatus==='Approved' || claim.claimStatus === 'Rejected'; else elseblock">
+              <button  class="btn btn-success"
+              (click)="approveClaim(claim);" disabled="claim.isDisabled">Approve</button>
+             <button  class="btn btn-warning" 
+                (click)="rejectClaim(claim);" disabled="claim.isDisabled">Reject</button>
+          </div>
+          <ng-template #elseblock>
+              <div >
+                  <button  class="btn btn-success" style="margin-left: 0px;"
+                  (click)="approveClaim(claim);">Approve</button>
+                 <button  class="btn btn-warning" style="margin-left: 0px;"
+                    (click)="rejectClaim(claim);" 
+                    >Reject</button>
+              </div>
+          </ng-template>
+          
+          <!-- <div *ngIf="claim.claimStatus!=='Approved' || claim.claimStatus !== 'Rejected'">
+              <button  class="btn btn-success" style="margin-left: 0px;"
+              (click)="approveClaim(claim);"
+              >Approve</button>
+              <button  class="btn btn-warning" style="margin-left: 0px;"
+                (click)="rejectClaim(claim);" 
+                >Reject</button>
+          </div> -->
+        </td>
+         
+            <!-- <td><button class="btn btn-success" style="margin-left: 0px;"
+              (click)="editClaim(claim);"
+              >Approve</button></td>
+              <td><button class="btn btn-warning" style="margin-left: 0px;"
+                (click)="editClaim(claim);"
+                >Reject</button></td>
+                <td><button disabled="{{buttonDisabled}}"> Click Me </button></td>-->
+     </tr> 
+     
+  </tbody>
+</table>
+</div>
